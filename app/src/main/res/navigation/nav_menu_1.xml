@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_menu_1"
+    app:startDestination="@id/menu1Fragment">
+
+    <fragment
+        android:id="@+id/menu1Fragment"
+        android:name="com.dome.jetpack.ui.fragment.menu.menu1.Menu1Fragment"
+        android:label="Menu1Fragment"
+        tools:layout="@layout/fragment_menu1">
+        <action
+            android:id="@+id/to_menu1BranchFragment2"
+            app:destination="@id/menu1BranchFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu1BranchFragment2"
+        android:name="com.dome.jetpack.ui.fragment.menu.menu1.Menu1BranchFragment"
+        android:label="Menu1BranchFragment"
+        tools:layout="@layout/fragment_menu1_branch"/>
+
+</navigation>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="BranchTestBinding">
+
+        <variable
+            name="viewModel"
+            type="com.dome.jetpack.ui.fragment.branch.BranchViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@{String.valueOf(viewModel.sum)}"
+            android:textColor="#333333"
+            android:textSize="25sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/but_add"
+            android:layout_width="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="添加"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:cornerRadius="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/but_lose"
+            android:layout_width="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="减少"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:cornerRadius="4dp" />
+    </LinearLayout>
+</layout>

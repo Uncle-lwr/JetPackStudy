@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/menuSelectFragment">
+
+    <action
+        android:id="@+id/popup_to_home"
+        app:popUpTo="@id/menuSelectFragment" />
+
+    <fragment
+        android:id="@+id/menuSelectFragment"
+        android:name="com.dome.jetpack.ui.fragment.menu.MenuSelectFragment"
+        android:label="@string/menu_select"
+        tools:layout="@layout/fragment_menu_select">
+        <action
+            android:id="@+id/to_nav_menu_1"
+            app:destination="@id/nav_menu_1" />
+        <action
+            android:id="@+id/to_nav_menu_2"
+            app:destination="@id/nav_menu_2" />
+        <action
+            android:id="@+id/to_branchTestFragment"
+            app:destination="@id/branchTestFragment" />
+    </fragment>
+    <include app:graph="@navigation/nav_menu_1" />
+    <include app:graph="@navigation/nav_menu_2" />
+
+    <fragment
+        android:id="@+id/branchTestFragment"
+        android:name="com.dome.jetpack.ui.fragment.branch.BranchTestFragment"
+        android:label="分支"
+        tools:layout="@layout/fragment_branch_test"/>
+
+</navigation>
